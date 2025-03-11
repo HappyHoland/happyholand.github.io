@@ -40,14 +40,14 @@ body {
 }
 
 .presentation__content__title {
-    font-size: 2vw;
+    font-size: large;
     font-family: "Krona One", sans-serif;
     font-weight: 400;
     font-style: normal;
 }
 
 .presentation__content__paragraph {
-    font-size: 1vh;
+    font-size: normal;
     font-family: "Montserrat", sans-serif;
     font-optical-sizing: auto;
     font-weight: 400;
@@ -65,7 +65,7 @@ body {
     width: 280px;
     text-align: center;
     border-radius: 0.2vh;
-    font-size: 1vh;
+    font-size: normal;
     font-family: "Montserrat", sans-serif;
     font-optical-sizing: auto;
     font-weight: 600;
