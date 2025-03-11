@@ -26,13 +26,13 @@ body {
 }
 
 .presentation__image {
-    border-radius: .2vh;
+    border-radius: .5vh;
     height: 55vh;
     order: 1;
 }
 
 .presentation__content {
-    width: 90vw;
+    width: 95vw;
     display: flex;
     flex-direction: column;
     gap: 5vh;
@@ -40,14 +40,14 @@ body {
 }
 
 .presentation__content__title {
-    font-size: 3.5vh;
+    font-size: 2vh;
     font-family: "Krona One", sans-serif;
     font-weight: 400;
     font-style: normal;
 }
 
 .presentation__content__paragraph {
-    font-size: 1.5vh;
+    font-size: 1vh;
     font-family: "Montserrat", sans-serif;
     font-optical-sizing: auto;
     font-weight: 400;
@@ -65,11 +65,11 @@ body {
     width: 280px;
     text-align: center;
     border-radius: 0.2vh;
-    font-size: 1.5vh;
+    font-size: 1vh;
     font-family: "Montserrat", sans-serif;
     font-optical-sizing: auto;
     font-weight: 600;
     font-style: normal;
-    padding: 2.2vh 0;
+    padding: .2vh 0;
     text-decoration: none;
 }
