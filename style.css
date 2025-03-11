@@ -20,6 +20,10 @@ body {
 .presentation__image {
     border-radius: 2px;
     height: 65vh;
+    @media screen and (max-width: 600px) {
+        order: 1;
+        height: 20vh;
+    }
 }
 
 .presentation {
@@ -36,6 +40,9 @@ body {
 .presentation__content {
     width: 45vw;
     display: flex;
+    @media screen and (max-width: 600px) {
+        order: 2;
+    }
     flex-direction: column;
     gap: 5vh;
 }
