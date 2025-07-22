@@ -197,12 +197,14 @@ body {
     }
 
     .presentation__content {
-        width: auto;
+        width: 100%;
     }
 
+}
+
+@media (max-width: 700px) {
     .presentation__image {
         width: auto;
     }
-
 }
 
