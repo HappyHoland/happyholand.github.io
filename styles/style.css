@@ -1,0 +1,208 @@
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    --main-color: #210F37;
+    --secondary-color: #DCA06D;
+    --terciary-color: #A55B4B;
+    --hover-color: #4F1C51;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    box-sizing: border-box;
+    background-color: var(--main-color);
+    color: var(--secondary-color);
+}
+
+.header {
+    padding: 2% 0% 0% 15%;
+}
+
+.header_menu {
+    display: flex;
+    gap: 6vw;
+}
+
+.header_menu_link {
+    font-family: 'Monteserrat', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color:var(--terciary-color);
+    text-decoration: none;
+}
+
+.presentation {
+    padding: 5% 15%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 82px;
+}
+
+.presentation__content {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2vh;
+}
+
+.presentation__content__title {
+    font-size: 2.25rem;
+    font-family: "Krona One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.title-enfasis {
+    color: var(--terciary-color);
+}
+
+.presentation__content__paragraph {
+    font-size: 1.5rem;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.presentation__content__paragraph_name {
+    font-weight: normal;
+}
+
+.presentation__content__paragraph_name:hover {
+    color: var(--terciary-color);
+}
+
+.presentation__links {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+    gap: 4vh;
+}
+
+.presentation__links_subtitle {
+    font-family: 'Krona One', sans-serif;
+    font-weight: 400;
+    font-size: 1.5rem;
+}
+
+.presentation__links__nav {
+    width: 50%;
+    border-radius: 8px;
+    padding: 1vh 0;
+    border: 2px solid var(--terciary-color);
+
+    color: var(--secondary-color);
+    text-align: center;
+    font-size: 1.5rem;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    text-decoration: none;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1vw;
+}
+
+.presentation__links__nav:hover {
+    background-color: var(--hover-color)
+}
+
+.presentation__links__nav__icon {
+    width: 6vh;
+}
+
+.resume__content__title:hover {
+    color:var(--hover-color);
+}
+
+.presentation__content__subtitle {
+    font-size: 1.5rem;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.enfasis {
+    color: var(--terciary-color);
+}
+
+.presentation__content__section__title {
+    font-size: 1.5rem;
+    font-family: "Krona One", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: bold;
+    margin-bottom: 2vh;
+}
+
+.presentation__content__section__list, .presentation__content__section__paragraph {
+    font-size: 1.5rem;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.presentation__content__section__list {
+    padding-left: 3vw;
+}
+
+.presentation__content__section__list__link {
+    text-decoration: none;
+    color: var(--terciary-color);
+}
+
+.presentation__content__section__list__link:hover {
+    text-decoration: underline;
+}
+
+.presentation__image {
+    width: 50%;
+}
+
+.footer {
+    color: var(--main-color);
+    background-color: var(--terciary-color);
+    text-align: center;
+    padding: 24px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+
+@media (max-width: 1200px) {
+    .header {
+        padding: 10%; 
+    }
+
+    .header_menu {
+        justify-content: center;
+        text-align: center;
+    }
+
+    .presentation {
+        flex-direction: column-reverse;
+        padding: 5%;
+        gap: 8vw;
+    }
+
+    .presentation__content {
+        width: auto;
+    }
+
+    .presentation__image {
+        width: auto;
+    }
+
+}
+
