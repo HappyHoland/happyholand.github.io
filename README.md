@@ -1,5 +1,3 @@
-```
-
 # Portfólio
 
 Olá, Bem vindo ao meu projeto de portfólio.
@@ -19,5 +17,3 @@ Olá, Bem vindo ao meu projeto de portfólio.
 ### Felipe Holanda
 
 ### Linkedin: https://www.linkedin.com/in/felipe-holanda-dev
-
-```
