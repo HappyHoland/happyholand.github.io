@@ -6,27 +6,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio</title>
     <link rel="stylesheet" type="text/css" href="./styles/style.css">
-    <link rel="stylesheet" type="text/css" media="screen and (max-width: 600px)" href="mobile_style.css">
 
 </head>
-<body>
+<body onload="loadLang()">
     <header class="header">
         <nav class="header_menu">
-            <a class="header_menu_link" href="index.html">Home</a>
-            <a class="header_menu_link" href="about.html">Sobre mim</a>
-            <a class="header_menu_link" href="resume.html">Currículo</a>
+            <a class="header_menu_link"  href="index.html">Home</a>
+            <a class="header_menu_link" id="about" href="about.html" onclick="addCookie('about.html')">Sobre mim</a>
+            <a class="header_menu_link" id="resume" href="resume.html" onclick="addCookie('resume.html')">Currículo</a>
         </nav>
+
+        <form>
+            <select class="language_select" id="languages" name="languages" onchange="changeLang()">
+                <option value="pt-br">PT-BR</option>
+                <option value="en">EN</option>
+            </select> 
+        </form>
     </header>
+    
     <main class="presentation">
 
-        <section class="presentation__content">
+        <section class="presentation__content pt-br">
 
-            <h1 class="presentation__content__title">Eleve seu negócio digital a outro nível <strong class="title-enfasis">com um Front-end de qualidade!</strong></h1>
+            <h1 class="presentation__content__title" id="home_title">Eleve seu negócio digital a outro nível <strong class="title-enfasis">com um Front-end de qualidade!</strong></h1>
             
-            <p class="presentation__content__paragraph">Olá! Sou <strong class="presentation__content__paragraph_name">Felipe Holanda</strong>, desenvolvedor Front-end com especialidade em React, HTML e CSS. Ajudo pequenos negócios e designers a colocarem em prática boas ideias. Vamos conversar?</p>
+            <p class="presentation__content__paragraph" id="home_paragraph">Olá! Sou <strong class="presentation__content__paragraph_name">Felipe Holanda</strong>, desenvolvedor Front-end com especialidade em React, HTML e CSS. Ajudo pequenos negócios e designers a colocarem em prática boas ideias. Vamos conversar?</p>
 
             <div class="presentation__links">
-                <h2 class="presentation__links_subtitle">Acesse minhas redes:</h2>
+                <h2 class="presentation__links_subtitle" id="home_social_title">Acesse minhas redes:</h2>
                 <a href="https://www.instagram.com/happyholand" class="presentation__links__nav">
                         <img class="presentation__links__nav__icon" src="assets/icons8-instagram-circle-50.png">
                         Instagram
@@ -47,6 +54,34 @@
     <footer>
         <p class="footer">Developed by Jose Felipe Holanda</p>
     </footer>
+
+    <script>
+        function changeLang() {
+            about_nav = document.getElementById("about");
+            resume_nav = document.getElementById("resume");
+            home_title = document.getElementById("home_title");
+            home_paragraph = document.getElementById("home_paragraph");
+            home_social_title = document.getElementById("home_social_title");
+
+
+            if (document.getElementById("languages").value == "pt-br") {
+                
+                about_nav.innerHTML = "Sobre mim";
+                resume_nav.innerHTML = "Currículo";
+                home_title.innerHTML = 'Eleve seu negócio digital a outro nível <strong class="title-enfasis">com um Front-end de qualidade!</strong>';
+                home_paragraph.innerHTML = 'Olá! Sou <strong class="presentation__content__paragraph_name">Felipe Holanda</strong>, desenvolvedor Front-end com especialidade em React, HTML e CSS. Ajudo pequenos negócios e designers a colocarem em prática boas ideias. Vamos conversar?';
+                home_social_title.innerHTML = "Acesse minhas redes:";
+
+            } else if (document.getElementById("languages").value == "en") {
+
+                about_nav.innerHTML = "About";
+                resume_nav.innerHTML = "Resume";
+                home_title.innerHTML = 'Take your online business to the next level <strong class="title-enfasis">with a quality Front End Dev!</strong>';
+                home_paragraph.innerHTML = 'Hello! I\'m <strong class="presentation__content__paragraph_name">Felipe Holanda</strong>, Front-end developer with a specialty in React, HTML and CSS. I help small businesses and designers to put great ideas in practice. Let\'s talk!';
+                home_social_title.innerHTML = "Find me on social media:";
+            } 
+        }
+    </script>
 </body>
 </html>
 

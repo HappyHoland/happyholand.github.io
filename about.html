@@ -7,26 +7,33 @@
     <title>Sobre mim</title>
     <link rel="stylesheet" type="text/css" href="styles/style.css">
 </head>
-<body>
+<body onload="loadLang()">
     <header class="header">
         <nav class="header_menu">
-            <a class="header_menu_link" href="index.html">Home</a>
-            <a class="header_menu_link" href="about.html">Sobre mim</a>
-            <a class="header_menu_link" href="resume.html">Currículo</a>
+            <a class="header_menu_link"  href="index.html" onclick="addCookie('index.html')">Home</a>
+            <a class="header_menu_link" id="about" href="about.html">Sobre mim</a>
+            <a class="header_menu_link" id="resume" href="resume.html" onclick="addCookie('resume.html')">Currículo</a>
         </nav>
+
+        <form>
+            <select class="language_select" id="languages" name="languages" onchange="changeLang()">
+                <option value="pt-br">PT-BR</option>
+                <option value="en">EN</option>
+            </select> 
+        </form>
     </header>
     <main class="presentation">
 
         <section class="presentation__content">
-            <h1 class="presentation__content__title">Sobre mim</h1>
+            <h1 class="presentation__content__title" id="about_title">Sobre mim</h1>
             
-            <p class="presentation__content__paragraph">Olá! Meu nome é Felipe Holanda, tenho vinte e poucos anos e sou do Rio Grande do Norte. Sou estudante de Tecnologia da Informação e atualmente estou focado em <strong class="enfasis">desenvolvimento web</strong>, com ênfase em <strong class="enfasis">front-end</strong>. Entrei na TI por gostar de <strong class="enfasis">lógica e desafios</strong>, e venho construindo minha trajetória unindo <strong class="enfasis">raciocínio técnico e criatividade</strong>.</p>
+            <p class="presentation__content__paragraph" id="about_paragraph_1">Olá! Meu nome é Felipe Holanda, tenho vinte e poucos anos e sou do Rio Grande do Norte. Sou estudante de Tecnologia da Informação e atualmente estou focado em <strong class="enfasis">desenvolvimento web</strong>, com ênfase em <strong class="enfasis">front-end</strong>. Entrei na TI por gostar de <strong class="enfasis">lógica e desafios</strong>, e venho construindo minha trajetória unindo <strong class="enfasis">raciocínio técnico e criatividade</strong>.</p>
 
-            <p class="presentation__content__paragraph">Comecei meus estudos com interesse em Inteligência Artificial, mas foi no front-end que encontrei uma área que conecta minha afinidade com design e minha vontade de criar experiências interativas e intuitivas para o usuário. Tenho me dedicado a aprender tecnologias como <strong class="enfasis">HTML, CSS, JavaScript</strong> e frameworks modernos, sempre buscando evoluir.</p>
+            <p class="presentation__content__paragraph" id="about_paragraph_2">Comecei meus estudos com interesse em Inteligência Artificial, mas foi no front-end que encontrei uma área que conecta minha afinidade com design e minha vontade de criar experiências interativas e intuitivas para o usuário. Tenho me dedicado a aprender tecnologias como <strong class="enfasis">HTML, CSS, JavaScript</strong> e frameworks modernos, sempre buscando evoluir.</p>
 
-            <p class="presentation__content__paragraph"> Além da programação, também sou apaixonado por arte e animação. Gosto de desenhar nas horas vagas, e acredito que esse olhar artístico contribui bastante na hora de pensar <strong class="enfasis">interfaces visualmente agradáveis e funcionais</strong>. </p>
+            <p class="presentation__content__paragraph" id="about_paragraph_3"> Além da programação, também sou apaixonado por arte e animação. Gosto de desenhar nas horas vagas, e acredito que esse olhar artístico contribui bastante na hora de pensar <strong class="enfasis">interfaces visualmente agradáveis e funcionais</strong>. </p>
                 
-            <p class="presentation__content__paragraph"> Estou aberto a oportunidades na área de front-end e animado para colaborar em projetos que <strong class="enfasis">me desafiem</strong> e contribuam para o meu <strong class="enfasis">crescimento como desenvolvedor</strong>. Vamos conversar?</p>
+            <p class="presentation__content__paragraph" id="about_paragraph_4"> Estou aberto a oportunidades na área de front-end e animado para colaborar em projetos que <strong class="enfasis">me desafiem</strong> e contribuam para o meu <strong class="enfasis">crescimento como desenvolvedor</strong>. Vamos conversar?</p>
             
         </section>
         
@@ -35,5 +42,40 @@
     <footer>
         <p class="footer">Developed by Jose Felipe Holanda</p>
     </footer>
+
+
+    <script>
+        function changeLang() {
+            about_nav = document.getElementById("about");
+            resume_nav = document.getElementById("resume");
+            about_title = document.getElementById("about_title");
+            about_paragraph_1 = document.getElementById("about_paragraph_1");
+            about_paragraph_2 = document.getElementById("about_paragraph_2");
+            about_paragraph_3 = document.getElementById("about_paragraph_3");
+            about_paragraph_4 = document.getElementById("about_paragraph_4");
+
+            if (document.getElementById("languages").value == "pt-br") {
+
+                about_nav.innerHTML = "Sobre mim";
+                resume_nav.innerHTML = "Currículo";
+                about_title.innerHTML = 'Sobre mim';
+                about_paragraph_1.innerHTML = 'Olá! Meu nome é Felipe Holanda, tenho vinte e poucos anos e sou do Rio Grande do Norte. Sou estudante de Tecnologia da Informação e atualmente estou focado em <strong class="enfasis">desenvolvimento web</strong>, com ênfase em <strong class="enfasis">front-end</strong>. Entrei na TI por gostar de <strong class="enfasis">lógica e desafios</strong>, e venho construindo minha trajetória unindo <strong class="enfasis">raciocínio técnico e criatividade</strong>.';
+                about_paragraph_2.innerHTML = 'Comecei meus estudos com interesse em Inteligência Artificial, mas foi no front-end que encontrei uma área que conecta minha afinidade com design e minha vontade de criar experiências interativas e intuitivas para o usuário. Tenho me dedicado a aprender tecnologias como <strong class="enfasis">HTML, CSS, JavaScript</strong> e frameworks modernos, sempre buscando evoluir.';
+                about_paragraph_3.innerHTML = 'Além da programação, também sou apaixonado por arte e animação. Gosto de desenhar nas horas vagas, e acredito que esse olhar artístico contribui bastante na hora de pensar <strong class="enfasis">interfaces visualmente agradáveis e funcionais</strong>.';
+                about_paragraph_4.innerHTML = 'Estou aberto a oportunidades na área de front-end e animado para colaborar em projetos que <strong class="enfasis">me desafiem</strong> e contribuam para o meu <strong class="enfasis">crescimento como desenvolvedor</strong>. Vamos conversar?';
+
+
+            } else if (document.getElementById("languages").value == "en") {
+
+                about_nav.innerHTML = "About";
+                resume_nav.innerHTML = "Resume";
+                about_title.innerHTML = 'About me';
+                about_paragraph_1.innerHTML = 'Hello! My name is Felipe Holanda, I\'m in my early twenties and I\'m from Rio Grande do Norte. I\'m an Information Technology student and currently focused on <strong class="enfasis">web development</strong>, with an emphasis on <strong class="enfasis">front-end</strong>. I got into IT because I enjoy <strong class="enfasis">logic and challenges</strong>, and I\'ve been building my journey by combining <strong class="enfasis">technical reasoning and creativity</strong>.';
+                about_paragraph_2.innerHTML = 'I started my studies with an interest in Artificial Intelligence, but it was in front-end that I found an area that connects my affinity for design and my desire to create interactive and intuitive user experiences. I\'ve been dedicating myself to learning technologies like <strong class="enfasis">HTML, CSS, JavaScript</strong> and modern frameworks, always looking to improve.';
+                about_paragraph_3.innerHTML = 'In addition to programming, I\'m also passionate about art and animation. I like to draw in my free time, and I believe this artistic perspective greatly contributes when thinking about <strong class="enfasis">visually pleasing and functional interfaces</strong>.';
+                about_paragraph_4.innerHTML = 'I\'m open to opportunities in front-end and excited to collaborate on projects that <strong class="enfasis">challenge me</strong> and contribute to my <strong class="enfasis">growth as a developer</strong>. Shall we talk?';
+            } 
+        }
+    </script>
 </body>
 </html>

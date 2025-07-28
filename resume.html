@@ -6,41 +6,49 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Currículo</title>
     <link rel="stylesheet" type="text/css" href="styles/style.css">
+    
 </head>
-<body>
+<body onload="loadLang()">
     <header class="header">
         <nav class="header_menu">
-            <a class="header_menu_link" href="index.html">Home</a>
-            <a class="header_menu_link" href="about.html">Sobre mim</a>
-            <a class="header_menu_link" href="resume.html">Currículo</a>
+            <a class="header_menu_link"  href="index.html" onclick="addCookie('index.html')">Home</a>
+            <a class="header_menu_link" id="about" href="about.html" onclick="addCookie('about.html')">Sobre mim</a>
+            <a class="header_menu_link" id="resume" href="resume.html">Currículo</a>
         </nav>
+
+        <form>
+            <select class="language_select" id="languages" name="languages" onchange="changeLang()">
+                <option value="pt-br">PT-BR</option>
+                <option value="en">EN</option>
+            </select> 
+        </form>
     </header>
     <main class="presentation">
 
         <section class="presentation__content">
-            <h1 class="presentation__content__title">Currículo - Felipe Holanda</h1>
-            <p class="presentation__content__subtitle">Junior Front-End Developer | <strong class="enfasis">HTML - Css - React </strong>| Front-End Development & Web Design</p>
+            <h1 class="presentation__content__title" id="resume_title">Currículo - Felipe Holanda</h1>
+            <p class="presentation__content__subtitle" id="resume_subtitle">Junior Front-End Developer | <strong class="enfasis">HTML - Css - React </strong>| Front-End Development & Web Design</p>
                 
             <div class="presentation_content_section">
-                <h2 class="presentation__content__section__title">Resumo</h2>
-                <p class="presentation__content__section__paragraph">Estudante de Tecnologia da Informação com foco em desenvolvimento front-end. Conhecimentos em <strong class="enfasis">HTML, CSS, JavaScript e React</strong>. Interesse em criar interfaces responsivas e funcionais, com boa experiência em projetos acadêmicos. <strong class="enfasis">Proativo, com facilidade para aprender e trabalhar em equipe</strong>. Busca oportunidade para aplicar e desenvolver suas habilidades na área.</p>
+                <h2 class="presentation__content__section__title" id="summary_title">Resumo</h2>
+                <p class="presentation__content__section__paragraph" id="summary_body">Estudante de Tecnologia da Informação com foco em desenvolvimento front-end. Conhecimentos em <strong class="enfasis">HTML, CSS, JavaScript e React</strong>. Interesse em criar interfaces responsivas e funcionais, com boa experiência em projetos acadêmicos. <strong class="enfasis">Proativo, com facilidade para aprender e trabalhar em equipe</strong>. Busca oportunidade para aplicar e desenvolver suas habilidades na área.</p>
             </div>
                 
             <div class="presentation_content_section">
-                <h2 class="presentation__content__section__title">Experiência</h2>
+                <h2 class="presentation__content__section__title" id="experience_title">Experiência</h2>
                 <ul class="presentation__content__section__list">
-                    <li class="presentation__content__section__list__item">Light Talk Startup (2023 - 2024) - <strong class="enfasis">Front End Developer</strong></li>
-                    <li class="presentation__content__section__list__item">Lucianne Alves Store(2022 - 2023) - <strong class="enfasis">Fullstack Developer</strong> </li>
+                    <li class="presentation__content__section__list__item" id="lt_experience">Light Talk Startup (2023 - 2024) - <strong class="enfasis">Front End Developer</strong></li>
+                    <li class="presentation__content__section__list__item" id="las_experience">Lucianne Alves Store(2022 - 2023) - <strong class="enfasis">Fullstack Developer</strong> </li>
                 </ul>
             </div>
                 
             <div class="presentation_content_section">
-                <h2 class="presentation__content__section__title">Educação</h2>
+                <h2 class="presentation__content__section__title" id="education_title">Educação</h2>
                 <ul class="presentation__content__section__list">
-                    <li class="presentation__content__section__list__item">Bacharelado em Tecnologia da Informação (2021 - 2025) - UFRN </li>
-                    <li class="presentation__content__section__list__item">HTML e CSS: ambientes de desenvolvimento, estrutura de arquivos e tags - Alura <a class="presentation__content__section__list__link" href="https://cursos.alura.com.br/user/josefelipehol/course/html-css-ambiente-arquivos-tags/certificate">com certificado</a> </li>
-                    <li class="presentation__content__section__list__item">HTML e CSS: Classes, posicionamento e Flexbox - Alura <a class="presentation__content__section__list__link" href="https://cursos.alura.com.br/user/josefelipehol/course/html-css-classes-posicionamento-flexbox/certificate">com certificado</a> </li>
-                    <li class="presentation__content__section__list__item"> HTML e CSS: cabeçalho, footer e variáveis CSS - Alura <a class="presentation__content__section__list__link" href="https://cursos.alura.com.br/user/josefelipehol/course/html-css-cabecalho-footer-variaveis-css/certificate">com certificado</a> </li>
+                    <li class="presentation__content__section__list__item" id="ufrn_education">Bacharelado em Tecnologia da Informação (2021 - 2025) - UFRN </li>
+                    <li class="presentation__content__section__list__item" id="alura_education_1">HTML e CSS: ambientes de desenvolvimento, estrutura de arquivos e tags - Alura <a class="presentation__content__section__list__link" href="https://cursos.alura.com.br/user/josefelipehol/course/html-css-ambiente-arquivos-tags/certificate">com certificado</a> </li>
+                    <li class="presentation__content__section__list__item" id="alura_education_2">HTML e CSS: Classes, posicionamento e Flexbox - Alura <a class="presentation__content__section__list__link" href="https://cursos.alura.com.br/user/josefelipehol/course/html-css-classes-posicionamento-flexbox/certificate">com certificado</a> </li>
+                    <li class="presentation__content__section__list__item" id="alura_education_3"> HTML e CSS: cabeçalho, footer e variáveis CSS - Alura <a class="presentation__content__section__list__link" href="https://cursos.alura.com.br/user/josefelipehol/course/html-css-cabecalho-footer-variaveis-css/certificate">com certificado</a> </li>
                 </ul>
             </div>
         </section>
@@ -52,5 +60,58 @@
     <footer>
         <p class="footer">Developed by Jose Felipe Holanda</p>
     </footer>
+
+    <script>
+        function changeLang() {
+            about_nav = document.getElementById("about");
+            resume_nav = document.getElementById("resume");
+            resume_title = document.getElementById("resume_title");
+            resume_subtitle = document.getElementById("resume_subtitle");
+            summary_title = document.getElementById("summary_title");
+            summary_body = document.getElementById("summary_body");
+            experience_title = document.getElementById("experience_title");
+            lt_experience = document.getElementById("lt_experience");
+            las_experience = document.getElementById("las_experience");
+            education_title = document.getElementById("education_title");
+            alura_education_1 = document.getElementById("alura_education_1");
+            alura_education_2 = document.getElementById("alura_education_2");
+            alura_education_3 = document.getElementById("alura_education_3");
+
+            if (document.getElementById("languages").value == "pt-br") {
+
+                about_nav.innerHTML = "Sobre mim";
+                resume_nav.innerHTML = "Currículo";
+                resume_title.innerHTML = 'Currículo - Felipe Holanda';
+                resume_subtitle.innerHTML = 'Junior Front-End Developer | <strong class="enfasis">HTML - Css - React </strong>| Front-End Development & Web Design';
+                summary_title.innerHTML = 'Resumo';
+                summary_body.innerHTML = 'Estudante de Tecnologia da Informação com foco em desenvolvimento front-end. Conhecimentos em <strong class="enfasis">HTML, CSS, JavaScript e React</strong>. Interesse em criar interfaces responsivas e funcionais, com boa experiência em projetos acadêmicos. <strong class="enfasis">Proativo, com facilidade para aprender e trabalhar em equipe</strong>. Busca oportunidade para aplicar e desenvolver suas habilidades na área.';
+                experience_title.innerHTML = 'Experiência';
+                lt_experience.innerHTML = 'Light Talk Startup (2023 - 2024) - <strong class="enfasis">Front End Developer</strong>';
+                las_experience.innerHTML = 'Lucianne Alves Store(2022 - 2023) - <strong class="enfasis">Fullstack Developer</strong> ';
+                ufrn_education.innerHTML = 'Educação';
+                education_title.innerHTML = 'Bacharelado em Tecnologia da Informação (2021 - 2025) - UFRN ';
+                alura_education_1.innerHTML = 'HTML e CSS: ambientes de desenvolvimento, estrutura de arquivos e tags - Alura <a class="presentation__content__section__list__link" href="https://cursos.alura.com.br/user/josefelipehol/course/html-css-ambiente-arquivos-tags/certificate">com certificado</a> ';
+                alura_education_2.innerHTML = 'HTML e CSS: Classes, posicionamento e Flexbox - Alura <a class="presentation__content__section__list__link" href="https://cursos.alura.com.br/user/josefelipehol/course/html-css-classes-posicionamento-flexbox/certificate">com certificado</a> ';
+                alura_education_3.innerHTML = 'HTML e CSS: cabeçalho, footer e variáveis CSS - Alura <a class="presentation__content__section__list__link" href="https://cursos.alura.com.br/user/josefelipehol/course/html-css-cabecalho-footer-variaveis-css/certificate">com certificado</a> ';
+
+            } else if (document.getElementById("languages").value == "en") {
+
+                about_nav.innerHTML = "About";
+                resume_nav.innerHTML = "Resume";
+                resume_title.innerHTML = 'Resume - Felipe Holanda';
+                resume_subtitle.innerHTML = 'Junior Front-End Developer | <strong class="enfasis">HTML - CSS - React</strong> | Front-End Development & Web Design';
+                summary_title.innerHTML = 'Summary';
+                summary_body.innerHTML = 'Information Technology student focused on front-end development. Knowledge of <strong class="enfasis">HTML, CSS, JavaScript, and React</strong>. Interested in creating responsive and functional interfaces, with solid experience in academic projects. <strong class="enfasis">Proactive, quick to learn, and a team player</strong>. Seeking opportunities to apply and further develop skills in the field.';
+                experience_title.innerHTML = 'Experience';
+                lt_experience.innerHTML = 'Light Talk Startup (2023 - 2024) – <strong class="enfasis">Front-End Developer</strong>';
+                las_experience.innerHTML = 'Lucianne Alves Store (2022 - 2023) – <strong class="enfasis">Fullstack Developer</strong> ';
+                ufrn_education.innerHTML = 'Education';
+                education_title.innerHTML = 'Bachelor’s in Information Technology (2021 - 2025) – UFRN';
+                alura_education_1.innerHTML = 'HTML and CSS: development environments, file structure and tags – Alura <a href="https://cursos.alura.com.br/user/josefelipehol/course/html-css-ambiente-arquivos-tags/certificate">with certificate</a>';
+                alura_education_2.innerHTML = 'HTML and CSS: Classes, positioning, and Flexbox – Alura <a href="https://cursos.alura.com.br/user/josefelipehol/course/html-css-classes-posicionamento-flexbox/certificate">with certificate</a>';
+                alura_education_3.innerHTML = 'HTML and CSS: header, footer, and CSS variables – Alura <a href="https://cursos.alura.com.br/user/josefelipehol/course/html-css-cabecalho-footer-variaveis-css/certificate">with certificate</a>';
+            } 
+        }
+    </script>
 </body>
 </html>
