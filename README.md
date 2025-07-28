@@ -6,7 +6,7 @@ Olá, Bem vindo ao meu projeto de portfólio.
 
 Esse projeto foi desenvolvido seguindo os cursos de CSS e HTML da alura
 
-acesse o projeto em https://portfolio-lac-one-57.vercel.app
+acesse o projeto em https://portfolio-jofeholanda.vercel.app
 
 ## Ferramentas utilizadas:
 
@@ -20,4 +20,4 @@ acesse o projeto em https://portfolio-lac-one-57.vercel.app
 
 ### Felipe Holanda
 
-### Linkedin: https://www.linkedin.com/in/felipe-holanda-dev
+### Linkedin: https://www.linkedin.com/in/felipe-holanda-developer
